@@ -35,7 +35,8 @@ npm run test
 ## Tools
 
 - **Fastify**: As web framework.
-- **SQLite**: As simple database.
+- **PostgreSQL**: As production database.
+- **SQLite**: As simple initial database.
 - **Knex**: For SQL query builder.
 - **Zod**: For schema validation (.env, request body).
 - **Vitest**: To write tests.
