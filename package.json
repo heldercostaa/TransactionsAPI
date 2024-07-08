@@ -1,0 +1,44 @@
+{
+  "name": "transactions-api",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "scripts": {
+    "prepare": "husky",
+    "build": "tsup src --out-dir build",
+    "dev": "tsx watch src/server.ts",
+    "test": "vitest run",
+    "knex": "node --no-warnings --import tsx ./node_modules/.bin/knex",
+    "lint": "eslint src --ext .ts --fix"
+  },
+  "author": "Helder Costa",
+  "license": "ISC",
+  "description": "A very simple API about Transactions (deposits and withdraws), to integrate and experiment some Typescript libraries.",
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.14.10",
+    "@types/supertest": "^6.0.2",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "supertest": "^7.0.0",
+    "tsup": "^8.1.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.1"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.1.7",
+    "zod": "^3.23.8"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

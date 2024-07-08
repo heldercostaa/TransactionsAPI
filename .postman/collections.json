@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "63b37b80-380e-4c64-9b83-e13e0eb89c78",
+		"name": "TransactionsAPI",
+		"description": "A very simple API about Transactions (deposits and withdraws), to integrate and experiment some Typescript libraries.\n\nGithub repo: [https://github.com/heldercostaa/TransactionsAPI](https://github.com/heldercostaa/TransactionsAPI)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8553383"
+	},
+	"item": [
+		{
+			"name": "Create transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Hamburger\",\r\n    \"amount\": 30,\r\n    \"type\": \"withdraw\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/transaction",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/transaction",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/transaction/e288ded3-0ed2-4d9e-b297-0556e17d5cee",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"transaction",
+						"e288ded3-0ed2-4d9e-b297-0556e17d5cee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/transaction/balance",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"transaction",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
